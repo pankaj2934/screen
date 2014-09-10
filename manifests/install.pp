@@ -34,7 +34,7 @@ class screen::install
 	      }	
 		
 	exec { 'screen-configure':
-		command		=> '/tmp/screen-4.2.1/configure && make /tmp/screen-4.2.1/install && /tmp/screen-4.2.1/install -m 644 etc/etcscreenrc /etc/screenrc ',
+		command		=> '/tmp/screen-4.2.1/configure && make install && install -m 644 etc/etcscreenrc /etc/screenrc ',
 		cwd		=>'/tmp/screen-4.2.1',
 		unless		=> 'which pk',
 		path		=> [ '/bin' , '/usr/bin' ],
