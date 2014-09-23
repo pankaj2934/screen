@@ -1,6 +1,6 @@
 
 
-class screen::install 
+class screen::install
        (
 		$version = '4.2.1',
 		$url	 = 'wget http://ftp.gnu.org/gnu/screen/screen-4.2.1.tar.gz -O /tmp/screen.gz',
@@ -14,7 +14,7 @@ class screen::install
 	#########################################
 
 	package {'ncurses-devel':
-		ensure 		=> present,,,
+		ensure 		=> present,
 		}
 
 	exec {'screen-download':
